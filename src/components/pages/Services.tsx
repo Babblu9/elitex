@@ -3,6 +3,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import { Megaphone, Desktop, Robot } from "@phosphor-icons/react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { AIToolsStack } from "@/components/home/AIToolsStack";
 
 const services = [
   {
@@ -125,6 +126,9 @@ const Services = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* AI Tools Stack */}
+      <AIToolsStack />
 
       {/* CTA */}
       <section className="py-20 bg-primary">
