@@ -27,10 +27,6 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
         },
-        electric: {
-          DEFAULT: "hsl(var(--electric-blue))",
-          glow: "hsl(var(--electric-blue-glow))",
-        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

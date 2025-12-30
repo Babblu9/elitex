@@ -43,7 +43,7 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-secondary/30 overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -52,10 +52,10 @@ export const Testimonials = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-display font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-navy mb-4">
                         Our Testimonials
                     </h2>
-                    <p className="text-gray-500 text-lg">
+                    <p className="text-navy/60 text-lg">
                         Our satisfied clients share their success stories and experiences with us.
                     </p>
                 </motion.div>
@@ -77,32 +77,32 @@ export const Testimonials = () => {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 0.1 }}
-                                            className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100 flex flex-col justify-between h-full min-h-[320px]"
+                                            className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full min-h-[320px] border border-gray-100"
                                         >
                                             <div>
-                                                <Quotes size={48} weight="fill" className="text-gray-900 mb-6" />
-                                                <p className="text-gray-600 leading-relaxed mb-8 font-medium">
-                                                    {testimonial.text}
+                                                <Quotes size={48} weight="fill" className="text-primary/20 mb-6" />
+                                                <p className="text-navy/80 leading-relaxed mb-8 font-medium">
+                                                    "{testimonial.text}"
                                                 </p>
                                             </div>
 
-                                            <div className="flex items-center justify-between border-t border-blue-100/50 pt-6 mt-auto">
+                                            <div className="flex items-center justify-between border-t border-gray-100 pt-6 mt-auto">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="bg-white p-1 rounded-full text-primary">
-                                                        <UserCircle size={40} weight="fill" className="text-indigo-900" />
+                                                    <div className="bg-secondary p-1 rounded-full text-primary">
+                                                        <UserCircle size={40} weight="fill" className="text-navy/40" />
                                                     </div>
-                                                    <span className="font-display font-bold text-gray-900 text-sm md:text-base">
+                                                    <span className="font-display font-bold text-navy text-sm md:text-base">
                                                         {testimonial.name}
                                                     </span>
                                                 </div>
                                                 <div className="flex gap-1">
                                                     {[...Array(5)].map((_, i) => {
                                                         if (i < Math.floor(testimonial.rating)) {
-                                                            return <Star key={i} size={16} weight="fill" className="text-yellow-400" />;
+                                                            return <Star key={i} size={16} weight="fill" className="text-yellow-500" />;
                                                         } else if (i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0) {
-                                                            return <StarHalf key={i} size={16} weight="fill" className="text-yellow-400" />;
+                                                            return <StarHalf key={i} size={16} weight="fill" className="text-yellow-500" />;
                                                         } else {
-                                                            return <Star key={i} size={16} className="text-gray-300" />;
+                                                            return <Star key={i} size={16} className="text-gray-200" />;
                                                         }
                                                     })}
                                                 </div>
@@ -112,8 +112,8 @@ export const Testimonials = () => {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12 border-2" />
-                        <CarouselNext className="hidden md:flex -right-12 h-12 w-12 border-2" />
+                        <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12 border-2 text-navy hover:text-primary hover:border-primary transition-colors" />
+                        <CarouselNext className="hidden md:flex -right-12 h-12 w-12 border-2 text-navy hover:text-primary hover:border-primary transition-colors" />
                     </Carousel>
                 </div>
             </div>
