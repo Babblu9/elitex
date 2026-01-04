@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { Users, Target, Lightbulb, Medal } from "@phosphor-icons/react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { AnalyticsDashboard } from "@/components/about/AnalyticsDashboard";
+
 
 const values = [
   {
@@ -96,7 +98,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2020, EliteX Solutions emerged from a simple observation:
+                  Founded in 2024, EliteX Solutions emerged from a simple observation:
                   most startups and SMBs struggle to access the same quality of technology
                   and marketing solutions available to enterprise companies.
                 </p>
@@ -139,6 +141,13 @@ const About = () => {
           </div>
         </div>
       </section>
+
+
+
+      {/* Analytics Dashboard */}
+      <AnalyticsDashboard />
+
+
 
       {/* Values */}
       <section className="py-24 bg-secondary">
@@ -256,7 +265,7 @@ const About = () => {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </Layout >
   );
 };
 

@@ -157,6 +157,18 @@ const tools = [
         logo: "https://cdn.simpleicons.org/framer",
         category: "WEB DESIGN",
         description: "Design to site"
+    },
+    {
+        name: "Cursor",
+        logo: "https://cdn.simpleicons.org/cursor", // Trying simpleicons, fallback to text if 404 handled (or user updates)
+        category: "AI CODE EDITOR",
+        description: "AI-first code editor"
+    },
+    {
+        name: "Antigravity",
+        logo: "/images/antigravity-logo.png", // Placeholder
+        category: "GROWTH AGENT",
+        description: "EliteX Intelligence"
     }
 ];
 
@@ -179,26 +191,26 @@ export const AIToolsStack = () => {
 
             {/* Tools Grid */}
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
                     {tools.map((tool, idx) => (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.05 }}
+                            transition={{ duration: 0.5, delay: idx * 0.03 }} // Faster stagger
                             viewport={{ once: true }}
-                            className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
+                            className="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
                         >
                             {/* Logo Area */}
-                            <div className="h-24 w-full bg-gray-50 rounded-xl flex items-center justify-center mb-6 border border-gray-100 group-hover:bg-white group-hover:border-primary/20 transition-all">
+                            <div className="h-16 w-full bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-gray-100 group-hover:bg-white group-hover:border-primary/20 transition-all">
                                 {tool.logo ? (
                                     <img
                                         src={tool.logo}
                                         alt={`${tool.name} logo`}
-                                        className="h-12 w-auto object-contain max-w-[80%] hover:scale-110 transition-transform duration-300"
+                                        className="h-8 w-auto object-contain max-w-[80%] hover:scale-110 transition-transform duration-300"
                                     />
                                 ) : (
-                                    <span className="text-2xl font-bold text-gray-400 group-hover:text-primary transition-colors">
+                                    <span className="text-lg font-bold text-gray-400 group-hover:text-primary transition-colors">
                                         {tool.name.substring(0, 2).toUpperCase()}
                                     </span>
                                 )}
@@ -206,15 +218,15 @@ export const AIToolsStack = () => {
 
                             {/* Content Area */}
                             <div className="flex flex-col flex-grow">
-                                <div className="mb-2">
-                                    <span className="inline-block px-2 py-1 rounded-md bg-gray-100 text-[10px] font-bold tracking-wider text-gray-500 uppercase border border-gray-200">
+                                <div className="mb-1.5">
+                                    <span className="inline-block px-1.5 py-0.5 rounded-[4px] bg-gray-100 text-[9px] font-bold tracking-wider text-gray-500 uppercase border border-gray-200 truncate max-w-full">
                                         {tool.category}
                                     </span>
                                 </div>
-                                <h3 className="text-lg font-bold text-navy mb-1 group-hover:text-primary transition-colors">
+                                <h3 className="text-sm font-bold text-navy mb-0.5 group-hover:text-primary transition-colors truncate">
                                     {tool.name}
                                 </h3>
-                                <p className="text-sm text-navy/60 font-medium">
+                                <p className="text-[10px] text-navy/60 font-medium line-clamp-1">
                                     {tool.description}
                                 </p>
                             </div>
