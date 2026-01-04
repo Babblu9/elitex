@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import bipLogo from "@/assets/clients/BIP_LOGO.png";
-import logo1 from "@/assets/clients/LOGO-1.jpeg";
+import bipLogo from "@/assets/clients/bip.png";
+import logo1 from "@/assets/clients/logo1.png";
 
 const clients = [
     { name: "BIP", logo: bipLogo },

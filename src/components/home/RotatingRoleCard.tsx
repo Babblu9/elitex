@@ -21,7 +21,7 @@ export const RotatingCard = ({
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % words.length);
-        }, 2500);
+        }, 1500);
         return () => clearInterval(interval);
     }, [words.length]);
 

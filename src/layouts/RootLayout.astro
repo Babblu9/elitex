@@ -1,5 +1,6 @@
 ---
 import { Providers } from "@/components/Providers";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 import "@/index.css";
 
 interface Props {
@@ -37,6 +38,7 @@ const {
   <body>
     <Providers client:load>
       <slot />
+      <ChatWidget client:load />
     </Providers>
   </body>
 </html>

@@ -12,6 +12,7 @@ import {
 } from "@phosphor-icons/react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { WhyAISection } from "@/components/about/WhyAISection";
 
 const aiServices = [
   {
@@ -177,6 +178,9 @@ const AISolutions = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Why AI Section */}
+      <WhyAISection />
 
       {/* CTA */}
       <section className="py-20 bg-primary">
